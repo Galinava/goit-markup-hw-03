@@ -59,7 +59,7 @@ a {
   margin: -1px;
 }
 .pre-title {
-  font-weight: 400px;
+  font-weight: 400;
   font-size: 14px;
   line-height: calc(24 / 14);
   letter-spacing: 0.03em;
@@ -72,11 +72,6 @@ a {
   letter-spacing: 0.03em;
 }
 /*---------------HEADER------------*/
-.hdr {
-  border: 1px solid #ececec;
-  margin-top: 32px;
-  margin-bottom: 94px;
-}
 .header {
   background-color: var(--header-bg-color);
   font-weight: 1600;
@@ -103,7 +98,7 @@ a {
   margin-left: 50px;
 }
 .header-link {
-  font-weight: 500px;
+  font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -115,7 +110,7 @@ a {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--logo-text-color);
-  margin-right: 93px;
+  margin-right: 94px;
 }
 .header-logo {
   color: #000000;
@@ -125,24 +120,25 @@ a {
   color: #2196f3;
 }
 .header-link-mail {
-  font-weight: 500px;
+  font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: #757575;
-  margin-right: 50px;
+}
+.header-item-contact + .header-item-contact {
+  margin-left: 50px;
 }
 .header-link-mail:hover,
 .header-link-mail:focus {
   color: #2196f3;
 }
 .header-link-tel {
-  font-weight: 500px;
+  font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: #757575;
-  margin-right: 50px;
 }
 .header-link-tel:hover,
 .header-link-tel:focus {
@@ -152,12 +148,15 @@ a {
   color: var(--current-text-color);
 }
 /*-----------------HERO----------------*/
-.hero-container {
+.hero {
   background-color: #2f303a;
-  flex-grow: 1;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 .hero-list {
   display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
 }
 .hero-title {
   font-family: "Roboto", sans-serif;
@@ -170,33 +169,23 @@ a {
   color: #ffffff;
   margin-bottom: 30px;
 }
-.button {
-  font-weight: 500px;
-  font-size: 16px;
-  line-height: calc(26 / 16);
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: #212121;
-  margin-left: 8px;
-  margin-bottom: 34px;
+.button + .button {
+  margin-left: 30px;
+}
+.hero-point {
+  display: flex;
+  justify-content: center;
 }
 .hero-btn {
   font-family: inherit;
-  font-weight: 700px;
   font-size: 16px;
   line-height: 1.87;
   display: flex;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
+  padding: 10px 32px 10px 32px;
   color: #ffffff;
-  margin: auto;
-  min-width: 200px;
-  height: 50px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 32px;
-  padding-right: 32px;
 }
 .hero-btn {
   background: #2196f3;
@@ -215,34 +204,37 @@ a {
 /*-----------------ABOUT-----------------*/
 .about {
   padding-top: 94px;
-  padding-bottom: 77px;
 }
 .about-item {
+  flex-basis: calc(100% / 4 - 30px);
   margin-left: 30px;
-  margin-bottom: 30px;
+  margin-top: 30px;
 }
+
 .about-list {
+  width: 1170px;
   display: flex;
   margin-left: -30px;
+  margin-top: -30px;
   flex-wrap: wrap;
 }
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+.about-item-portfolio {
+  justify-content: center;
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  margin-top: 30px;
 }
 .about-title-list {
   font-style: 400px;
-  font-weight: 700px;
+  font-weight: 700;
   font-size: 18px;
   line-height: calc(36 / 18);
   letter-spacing: 0.06em;
   color: #212121;
-  margin-bottom: 4px;
-  margin-left: 30px;
 }
 .about-title {
   font-style: 400px;
-  font-weight: 700px;
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
@@ -255,8 +247,6 @@ a {
   line-height: calc(30 / 16);
   letter-spacing: 0.03em;
   color: #757575;
-  margin-bottom: 20px;
-  margin-left: 30px;
 }
 .about-pre-title {
   font-size: 14px;
@@ -268,6 +258,10 @@ a {
   background: #ffffff;
   border: 1px solid #eeeeee;
   box-sizing: border-box;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 /*---------------------REASONS-------------*/
 .reasons-list {
@@ -277,8 +271,8 @@ a {
   margin-left: 30px;
 }
 .reasons {
-  padding-top: 77px;
-  padding-bottom: 50px;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 .reasons-title {
   font-style: 400;
@@ -292,11 +286,9 @@ a {
 }
 /*---------------SPECIALIST----------------------*/
 .specialist {
-  padding-top: 50px;
-  padding-bottom: 100px;
-}
-.section-specialist {
   background: #f5f4fa;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 .specialist-title {
   font-style: 400;
@@ -309,16 +301,18 @@ a {
   margin-bottom: 50px;
 }
 .specialist-list {
+  width: 1170px;
   display: flex;
-  margin-left: -30px;
   flex-wrap: wrap;
-  margin-bottom: -30px;
+  margin-left: -30px;
+  margin-top: -30px;
 }
 .specialist-item {
-  width: calc(100% / 4 - 30px);
+  flex-basis: calc(100% / 4 - 30px);
   margin-left: 30px;
-  margin-bottom: 30px;
+  margin-top: 30px;
 }
+
 .specialist-item-title {
   font-style: 400;
   font-weight: 500;
@@ -335,7 +329,6 @@ a {
   text-align: center;
   letter-spacing: 0.03em;
   color: #757575;
-  margin-bottom: 30px;
 }
 .specialist-item-content {
   padding: 30px;
@@ -345,10 +338,13 @@ a {
   border-radius: 0px 0px 4px 4px;
 }
 /*-------------CELLAR------------*/
+.cellar {
+  background: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 .cellar-container {
   background: #2f303a;
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
 .cellar-logo {
   font-family: "Raleway", sans-serif;
@@ -356,6 +352,8 @@ a {
   line-height: calc(31 / 26);
   letter-spacing: 0.03em;
   color: #2196f3;
+  margin-bottom: 20px;
+  display: block;
 }
 .logotip-ft {
   color: #ffffff;
@@ -375,4 +373,7 @@ a {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+.cellar-item {
+  margin-bottom: 9px;
 }
