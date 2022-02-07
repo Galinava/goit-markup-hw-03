@@ -51,8 +51,6 @@ a {
   white-space: nowrap;
   width: 1px;
   height: 1px;
-  overflow: hidden;
-  border: 0;
   padding: 0;
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -170,7 +168,7 @@ a {
   margin-bottom: 30px;
 }
 .button + .button {
-  margin-left: 30px;
+  margin-left: 8px;
 }
 .hero-point {
   display: flex;
@@ -223,6 +221,7 @@ a {
   margin-left: 30px;
   margin-top: 30px;
 }
+
 .about-title-list {
   font-style: 400px;
   font-weight: 700;
@@ -374,4 +373,7 @@ a {
 }
 .cellar-item {
   margin-bottom: 9px;
+}
+.cellar-item:last-child {
+  margin-bottom: 0;
 }
